@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="950.0" prefHeight="450.0" prefWidth="950.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProvaGitt.Tesi.FXMLController">
+  <tabs>
+    <Tab text="Gestisci Lezioni">
+         <content>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Lezioni Singole">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="txtNomeStud1" prefHeight="25.0" prefWidth="165.0" promptText="Nome Studente" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="40.0" />
+                              <TextField fx:id="txtCognomeStud1" prefHeight="25.0" prefWidth="165.0" promptText="Cognome Studente" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="40.0" />
+                              <TextArea fx:id="Area1" editable="false" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prenota Lezioni Singole:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0" />
+                              <DatePicker fx:id="Data1" editable="false" prefHeight="25.0" prefWidth="185.0" promptText="Selezionare Data" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="90.0" />
+                              <ComboBox fx:id="BoxOrario1" prefHeight="25.0" prefWidth="140.0" promptText="Orario" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="90.0" />
+                              <ComboBox fx:id="BoxTutor1" prefHeight="25.0" prefWidth="190.0" promptText="Seleziona Tutor" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="140.0" />
+                              <Button mnemonicParsing="false" onAction="#doCalendario1" prefHeight="25.0" prefWidth="143.0" text="CALENDARIO" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="140.0" />
+                              <ComboBox fx:id="BoxMateria1" prefHeight="25.0" prefWidth="287.0" promptText="Seleziona Materia" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="200.0" />
+                              <Button mnemonicParsing="false" onAction="#doVerificaDisponibilita1" prefHeight="25.0" prefWidth="254.0" text="VERIFICA DISPONIBILITA'" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="240.0" />
+                              <Button mnemonicParsing="false" onAction="#doPrenotaLezione1" prefHeight="25.0" prefWidth="135.0" text="PRENOTA" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="300.0" />
+                              <Button mnemonicParsing="false" onAction="#doCancellaLezione1" prefHeight="25.0" prefWidth="135.0" text="CANCELLA" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="300.0" />
+                              <Button mnemonicParsing="false" onAction="#doReset1" prefHeight="25.0" prefWidth="135.0" text="RESET" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="345.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Lezioni Multiple">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ComboBox fx:id="BoxOrario2" prefWidth="150.0" promptText="Orario" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="90.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prenota Lezioni Multiple:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0" />
+                              <TextArea fx:id="Area2" editable="false" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                              <TextField fx:id="txtNomeStud2" promptText="Nome Studente" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="40.0" />
+                              <TextField fx:id="txtCognomeStud2" promptText="Cognome Studente" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="40.0" />
+                              <DatePicker fx:id="Data2" editable="false" promptText="Selezionare Data" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="90.0" />
+                              <ComboBox fx:id="BoxMateria2" prefHeight="25.0" prefWidth="315.0" promptText="Seleziona Materia" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="140.0" />
+                              <Button mnemonicParsing="false" onAction="#doAggiungiMateria2" prefHeight="25.0" prefWidth="135.0" text="AGGIUNGI" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="190.0" />
+                              <Button mnemonicParsing="false" onAction="#doCancellaMateria2" prefHeight="25.0" prefWidth="135.0" text="CANCELLA" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="190.0" />
+                              <Button mnemonicParsing="false" onAction="#doCalcolaLezioniMultiple2" prefHeight="25.0" prefWidth="220.0" text="CALCOLA LEZIONI MULTIPLE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="240.0" />
+                              <Button mnemonicParsing="false" onAction="#doPrenotaLezioni2" prefHeight="25.0" prefWidth="120.0" text="PRENOTA" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="240.0" />
+                              <Button mnemonicParsing="false" onAction="#doReset2" prefHeight="25.0" prefWidth="89.0" text="RESET" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="320.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Lezioni Giornaliere">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Calcola Lezioni Giornaliere:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0" />
+                              <TextArea fx:id="Area3" editable="false" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                              <DatePicker fx:id="Data3" editable="false" prefHeight="25.0" prefWidth="185.0" promptText="Selezionare Data" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="60.0" />
+                              <Button mnemonicParsing="false" onAction="#doCalcolaLezioniGiornaliere3" prefHeight="25.0" prefWidth="243.0" text="CALCOLA LEZIONI GIORNALIERE" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="270.0" />
+                              <Button mnemonicParsing="false" onAction="#doPrenotaLezioni3" prefHeight="25.0" prefWidth="100.0" text="PRENOTA" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="330.0" />
+                              <Button mnemonicParsing="false" onAction="#doReset3" prefHeight="25.0" prefWidth="100.0" text="RESET" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="330.0" />
+                              <Button mnemonicParsing="false" onAction="#doVisualizza3" prefHeight="25.0" prefWidth="125.0" text="VISUALIZZA" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="60.0" />
+                              <ComboBox fx:id="BoxLezioni3" prefHeight="25.0" prefWidth="319.0" promptText="Seleziona Lezione" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="105.0" />
+                              <Button layoutX="109.0" mnemonicParsing="false" onAction="#doFissaLezione3" prefHeight="25.0" prefWidth="190.0" text="FISSA LEZIONE" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="150.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Calcola Lezioni Giornaliere: " AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="230.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </content>
+    </Tab>
+    <Tab text="Gestisci Studente">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="txtNomeStud4" promptText="Nome Studente" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="70.0" />
+                  <TextField fx:id="txtCognomeStud4" promptText="Cognome Studente" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="70.0" />
+                  <TextArea fx:id="Area4" editable="false" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="45.0" />
+                  <ComboBox fx:id="BoxClasse4" prefHeight="25.0" prefWidth="180.0" promptText="Classe" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="120.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Studente DSA:" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="182.0" />
+                  <CheckBox fx:id="CheckYes4" mnemonicParsing="false" onAction="#HandleYesDSA4" text="Sì" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="180.0" />
+                  <CheckBox fx:id="CheckNo4" mnemonicParsing="false" onAction="#HandleNoDSA4" text="No" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="180.0" />
+                  <Button mnemonicParsing="false" onAction="#doAggiornaStudente4" prefHeight="25.0" prefWidth="115.0" text="AGGIORNA" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="177.0" />
+                  <Button mnemonicParsing="false" onAction="#doAggiungiStudente4" prefHeight="25.0" prefWidth="197.0" text="AGGIUNGI STUDENTE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="240.0" />
+                  <Button mnemonicParsing="false" onAction="#doRimuoviStudente4" prefHeight="25.0" prefWidth="114.0" text="RIMUOVI" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="240.0" />
+                  <Button mnemonicParsing="false" onAction="#doReset4" prefHeight="25.0" prefWidth="114.0" text="RESET" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="300.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stampa Info:" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="360.0" />
+                  <Button mnemonicParsing="false" onAction="#doStampaInfo4" prefHeight="25.0" prefWidth="140.0" text="STAMPA INFO" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="357.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aggiungi/Aggiorna Studenti:" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="25.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Gestisci Tutor">
+         <content>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Aggiorna Tutor">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ComboBox fx:id="BoxOrario5" prefWidth="150.0" promptText="Orario" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="210.0" />
+                              <TextArea fx:id="Area5" editable="false" layoutX="415.0" layoutY="18.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                              <ComboBox fx:id="BoxTutor5" prefHeight="25.0" prefWidth="245.0" promptText="Seleziona Tutor" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="18.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aggiungi/Rimuovi Materie:" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="60.0" />
+                              <ComboBox fx:id="BoxMaterie5" prefHeight="25.0" prefWidth="300.0" promptText="Seleziona Materia" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="90.0" />
+                              <Button mnemonicParsing="false" onAction="#doRimuoviMateria5" prefHeight="25.0" prefWidth="140.0" text="RIMUOVI" AnchorPane.leftAnchor="215.0" AnchorPane.topAnchor="130.0" />
+                              <Button mnemonicParsing="false" onAction="#doAggiornaMateria5" prefHeight="25.0" prefWidth="140.0" text="AGGIORNA" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="130.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aggiungi/Rimuovi Disponibilità:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="180.0" />
+                              <DatePicker fx:id="Data5" editable="false" prefHeight="25.0" prefWidth="190.0" promptText="Selezionare Data" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="210.0" />
+                              <Button mnemonicParsing="false" onAction="#doAggiungiDisponibilita5" prefHeight="25.0" prefWidth="130.0" text="AGGIUNGI" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="250.0" />
+                              <Button mnemonicParsing="false" onAction="#doRimuoviDisponibilita5" prefHeight="25.0" prefWidth="130.0" text="RIMUOVI" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="250.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stampa:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="300.0" />
+                              <Button mnemonicParsing="false" onAction="#doStampaInfo5" prefHeight="25.0" prefWidth="120.0" text="STAMPA INFO" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="295.0" />
+                              <Button mnemonicParsing="false" onAction="#doReset5" prefHeight="25.0" prefWidth="99.0" text="RESET" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="340.0" />
+                              <Button mnemonicParsing="false" onAction="#doRimuoviTutor5" prefHeight="25.0" prefWidth="130.0" text="RIMUOVI TUTOR" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="340.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Aggiungi Tutor">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextArea fx:id="Area6" editable="false" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                              <TextField fx:id="txtCognomeTutor6" promptText="Cognome Tutor" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="20.0" />
+                              <TextField fx:id="txtNomeTutor6" promptText="Nome Tutor" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="20.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aggiungi Materie:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="60.0" />
+                              <ComboBox fx:id="BoxMaterie6" prefHeight="25.0" prefWidth="300.0" promptText="Seleziona Materia" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="90.0" />
+                              <Button mnemonicParsing="false" onAction="#doAggiungiMateria6" prefHeight="25.0" prefWidth="180.0" text="AGGIUNGI MATERIA" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="130.0" />
+                              <Button mnemonicParsing="false" onAction="#doRimuoviMateria6" prefHeight="25.0" prefWidth="150.0" text="RIMUOVI MATERIA" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="130.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inserisci informazioni sulla Formazione del Tutor:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="170.0" />
+                              <TextField fx:id="txtFormazione6" prefHeight="50.0" prefWidth="351.0" promptText="Formazione Tutor" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="200.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Educatore:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="270.0" />
+                              <CheckBox fx:id="CheckEducatoreYes6" mnemonicParsing="false" onAction="#HandleYesEducatore6" text="Si" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="270.0" />
+                              <CheckBox fx:id="CheckEducatoreNo6" mnemonicParsing="false" onAction="#HandleNoEducatore6" text="No" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="270.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Interno:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="310.0" />
+                              <CheckBox fx:id="CheckInternoYes6" mnemonicParsing="false" onAction="#HandleYesInterno6" text="Si" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="310.0" />
+                              <CheckBox fx:id="CheckInternoNo6" mnemonicParsing="false" onAction="#HandleNoInterno6" text="No" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="310.0" />
+                              <Button mnemonicParsing="false" onAction="#doAggiungiTutor6" prefHeight="25.0" prefWidth="200.0" text="AGGIUNGI NUOVO TUTOR" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="345.0" />
+                              <Button mnemonicParsing="false" onAction="#doReset6" prefHeight="25.0" prefWidth="83.0" text="RESET" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="345.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </content>
+      </Tab>
+      <Tab text="Resoconto">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextArea fx:id="Area7" editable="false" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="60.0" />
+                  <ComboBox fx:id="BoxMese7" prefHeight="25.0" prefWidth="233.0" promptText="Seleziona Mese" AnchorPane.leftAnchor="530.0" AnchorPane.topAnchor="20.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Resoconto Tutor :" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="40.0" />
+                  <ComboBox fx:id="BoxTutor7" prefHeight="25.0" prefWidth="245.0" promptText="Seleziona Tutor" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="70.0" />
+                  <Button mnemonicParsing="false" onAction="#doResocontoTutor7" prefHeight="25.0" prefWidth="155.0" text="RESOCONTO TUTOR" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="110.0" />
+                  <Button mnemonicParsing="false" onAction="#doLezioniPrenotateTutor7" prefHeight="25.0" prefWidth="185.0" text="LEZIONI PRENOTATE" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="110.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Resoconto Studente :" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="170.0" />
+                  <TextField fx:id="txtNomeStud7" promptText="Nome Studente" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="200.0" />
+                  <TextField fx:id="txtCognomeStud7" promptText="Cognome Studente" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="200.0" />
+                  <Button mnemonicParsing="false" onAction="#doResocontoStudente7" prefHeight="25.0" prefWidth="200.0" text="RESOCONTO STUDENTE" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="240.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Resoconto Mensile :" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="290.0" />
+                  <Button mnemonicParsing="false" onAction="#doTuttiTutor7" prefHeight="25.0" prefWidth="155.0" text="TUTTI I TUTOR" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="285.0" />
+                  <Button mnemonicParsing="false" onAction="#doStampaLezioniPrenotate7" prefHeight="25.0" prefWidth="185.0" text="LEZIONI PRENOTATE" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="335.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stampa Lezioni Prenotate :" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="340.0" />
+                  <Button layoutX="276.0" mnemonicParsing="false" onAction="#doReset7" prefHeight="25.0" prefWidth="80.0" text="RESET" AnchorPane.leftAnchor="276.0" AnchorPane.topAnchor="378.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="?">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
